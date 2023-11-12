@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.contact_page),
-              label: 'Portfolio.dart'
+              label: 'Portfolio'
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.contact_mail),
