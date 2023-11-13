@@ -36,7 +36,6 @@ class ProfileCard extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            // Photo on top
             ClipRRect(
               borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
               child: Image.asset(
@@ -46,7 +45,6 @@ class ProfileCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            // Text at the bottom
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Column(
