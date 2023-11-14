@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'error_screen.dart';
-import 'home_screen.dart';
+import 'screen/error_screen.dart';
+import 'screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
