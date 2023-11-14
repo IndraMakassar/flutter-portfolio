@@ -5,5 +5,4 @@ class PortfolioModel {
   final String description;
   final String photoURL;
 
-
 }

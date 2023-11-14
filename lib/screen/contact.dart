@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Contact extends StatelessWidget {
   const Contact({super.key});
 
-  static const snackBar = SnackBar(
-    content: Text('Copied to Clipboard'),
-  );
+  static final Uri _email = Uri.parse('mailto:anindhpra@gmail.com');
+  static final Uri _phone = Uri.parse('tel:+6285298732104');
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +18,7 @@ class Contact extends StatelessWidget {
         children: <Widget>[
           GestureDetector(
             onTap: () {
-              Clipboard.setData(
-                  const ClipboardData(text: 'anindhpra@gmail.com')).then((
-                  value) {
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              });
+              _launchMail();
             },
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -36,11 +31,7 @@ class Contact extends StatelessWidget {
           const SizedBox(height: 8),
           GestureDetector(
             onTap: () {
-              Clipboard.setData(
-                  const ClipboardData(text: '+6285298732104')).then((
-                  value) {
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              });
+              _launchTelp();
             },
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -54,4 +45,12 @@ class Contact extends StatelessWidget {
       ),
     );
   }
+
+  void _launchMail() async {
+    if (!await launchUrl(_email)) throw 'Could not launch $_email';
+  }
+  void _launchTelp() async {
+    if (!await launchUrl(_phone)) throw 'Could not launch $_phone';
+  }
+
 }
