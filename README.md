@@ -1,16 +1,16 @@
 # portfolio
 
-A new Flutter project.
+A Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+in this project i use home_screen.dart as the first screen. 
+home_screen.dart contains a bottom nav bar. 
+what appears in the body is contact.dart, portfolio.dart, profile.dart.
+contact.dart have a column of email and number if presssed it will link to the associated app using mailto: and telp:. 
+portfolio.dart it have a grid of card which is build using the data from portfolio_repository.dart. 
+and lastly profile which have my name and photo in a card on the centre of the screen. 
 
-A few resources to get you started if this is your first Flutter project:
+## Difficulty
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The Most difficult part for me is dealing with overflow. this is in part because i don't want my app to scroll if i make is scrollable i would't need to deal with overflow.
